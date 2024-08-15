@@ -10,13 +10,20 @@
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
     <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.10.2/dist/umd/popper.min.js" integrity="sha384-7+zCNj/IqJ95wo16oMtfsKbZ9ccEh31eOz1HGyDuCQ6wgnyJNSYdrPa03rtR1zdB" crossorigin="anonymous"></script>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.min.js" integrity="sha384-QJHtvGhmr9XOIpI6YVutG+2QOK9T+ZnN4kzFN1RtK3zEFEIsxhlmWl5/YESvpZ13" crossorigin="anonymous"></script>
+    <script src="https://code.jquery.com/jquery-3.6.4.min.js"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.carousel.min.css" integrity="sha512-tS3S5qG0BlhnQROyJXvNjeEM4UpMXHrQfTGmbQ1gKmelCxlSEBUaxhRBj/EFTzpbP4RVSrpEikbmdJobCvhE3g==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.theme.default.min.css" integrity="sha512-sMXtMNL1zRzolHYKEujM2AqCLUR9F2C4/05cdbxjjLSRvMQIciEPCQZo++nk7go3BtSuK9kfa/s+a4f4i5pLkw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/owl.carousel.min.js" integrity="sha512-bPs7Ae6pVvhOSiIcyUClR7/q2OAsRiovw4vAkX+zJbw3ShAeeqezq50RIIcIURq7Oa20rW2n2q+fyXBNcU9lrw==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <script src="jq.js"></script>
+    
 </head>
 <style>
     .navbar{
-        position: absolute;
-        z-index: 1;
-        background-color: #0000 !important;
+        position: fixed;
+        z-index: 5;
+        background-color: #3d2d79 !important;
         font-family: 'Roboto', sans-serif;
+        width: 100%;
        
     }
 </style>
@@ -39,26 +46,27 @@
                     <li class="nav-item px-1"></li>
                     
                  <li> 
-                  <a class="nav-link active" style="color:white;" aria-current="page" href="#">HOME</a>
+                  <a class="nav-link active" style="color:white;" aria-current="page" href="#banner" >HOME</a>
                 </li>  
                 <li>
-                  <a class="nav-link active" style="color:white;"  href="#" >ABOUT</a>
+                  <a class="nav-link active" style="color:white;" href="#story" >ABOUT</a>
                 </li>
                 <li>
-                    <a class="nav-link active" style="color:white;"  href="#" >EXPERTISE</a>
+                    <a class="nav-link active" style="color:white;"  href="#expertise" >EXPERTISE</a>
                   </li>
                 <li>
-                  <a class="nav-link active" style="color:white;" href="#">TEAMS</a>
+                  <a class="nav-link active" style="color:white;" href="#team">TEAMS</a>
                 </li>
                 <li>
-                  <a class="nav-link active" style="color:white;" href="#">WORKS</a>
+                  <a class="nav-link active" style="color:white;" href="#works">WORKS</a>
                 </li>
                 <li>
-                  <a class="nav-link active" style="color:white;" href="#">PEOPLE SAY</a>
+                  <a class="nav-link active" style="color:white;" href="#testimonials">PEOPLE SAY</a>
                 </li>
                 <li>
-                  <a class="nav-link active" style="color:white;" href="#">CONTACT</a>
+                  <a class="nav-link active" style="color:white;" href="#contacts">CONTACT</a>
                 </li>
+            
                 </ul>
               </div>
             </div>
@@ -66,23 +74,21 @@
     </header>
 
     <section id="banner">
-        <div class="container">
-            <div class="row" style="text-align: center;">
+            <div class="owl-carousel" id="homebanner">
+                <div class="item"><img src="Assets/bg.png"></div>
+                <div class="item"><img src="Assets/city.png"></div>
+                <div class="item"><img src="Assets/citylights.jpg"></div>
+                <div class="item"><img src="Assets/water.jpg"></div>
+            </div>
+            <div class="carou" style="text-align: center;" >
                 <div class="col-12 text-center">
                 <h1>We Are Awesome Creative Agency</h1>
                 <p>This is Photoshop's version  of Lorem Ipsum. Proin gravida nibh vel velit auctor aliquet. Aenean sollicitudin, lorem<br> quis bibendum auctor,nisi elit consequat ipsum, nec sagittis sem nibh id elit. Duis sed odio sit amet nibh vulputate <br>cursus a sit amet mauris. Morbi accumsan ipsum velit.</p>
                 <button type="button" class="btn btn-outline-info" style="width: fit-content; padding: 8px;width: 15vh; margin-top: 10vh; font-family: 'Hammersmith One', sans-serif; font-size: 18px;">LEARN MORE</button>
+            
             </div>
-            <row>
-                <div class="col-12 text-center">
-                <img src="/Assets/bcircle.png" >
-                <img src="/Assets/oval.png">
-                <img src="/Assets/oval.png">
-                <img src="/Assets/oval.png">
-</div>
-            </row>
-        </div>
     </section>
+
 
     <section id="story">
         <div class="container">
@@ -90,7 +96,7 @@
                 <div class="col-12">
                     <div class="row">
                         <div class="col-5">
-                            <img src="/Assets/logo.png" alt="logo">
+                            <img src="Assets/logo.png" alt="logo">
                         </div>
                         <div id="storycontext" class="col-7">
                             <h2 >OUR STORY</h2>
@@ -98,6 +104,7 @@
                             <p>Morbi accumsan ipsum velit. Nam nec tellus a odio tincidunt auctor a ornare odio. Sed non  mauris vitae erat consequat auctor eu in elit. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos.</p>
                             <button type="button"  class="btn btn-outline-info" >LEARN MORE</button>
                         </div>
+                        
                     </div>
                 </div>
             </div>
@@ -110,11 +117,20 @@
                 <div class="col-12">
                     <div class="row">
                         <div class="col-6">
-                            <img src="/Assets/play.png" alt="play"
-                    >
-                            
+                            <div id="playb" class="playy">
+                              <img src="Assets/play.png" alt="play" >
+                            </div>
+
+                            <div id="videocon" >
+                             <video width="1000" height="500" controls>
+                                <source src="Assets/pantropiko.mp4" type="video/mp4" id="bini" >
+                              </video>
+
+                            </div>
                             <div class="col-6 text-center">
+                                <div class="watch">
                                 <h3>WATCH OUR STORY</h3>
+                            </div>
                         </div>
                     </div>
                     </div>
@@ -122,6 +138,8 @@
             </div>
         </div>
     </section>
+
+
     <section id="expertise">
         <div class="container">
             <div class="row">
@@ -131,37 +149,37 @@
                     <hr class="solid">
                     <div class="row" style="position: relative; top: 5vh;">
                         <div id="brnd" class="col-3">
-                            <img src="/Assets/web.png ">
+                            <img src="Assets/web.png ">
                             <h6>WEB DESIGN & DEVELOPMENT</h6>
                             <p>This is Photoshop's version  of Lorem<br> Ipsum. Proin gravida nibh vel velit auctor aliquet Aenean.</p>
                         </div> 
 
                     <div id="brnd1" class="col-3">
-                        <img src="/Assets/brand.png">
+                        <img src="Assets/brand.png">
                         <h6>BRANDING IDENTITY</h6>
                         <p>This is Photoshop's version  of Lorem<br> Ipsum. Proin gravida nibh vel velit auctor aliquet Aenean.</p>
                     </div>
 
                     <div id="brnd2" class="col-3">
-                        <img src="/Assets/mobile.png">
+                        <img src="Assets/mobile.png">
                         <h6>MOBILE APP</h6>
                         <p>This is Photoshop's version  of Lorem<br> Ipsum. Proin gravida nibh vel velit auctor aliquet Aenean.</p>
                     </div>
                     <hr class="seperate" style="margin: 50px;">
                     <div class="row">
                         <div id="brnd3" class="col-3" >
-                            <img src="/Assets/engine.png">
+                            <img src="Assets/engine.png">
                             <h6>SEARCH ENGINE OPTIMIZATION</h6>
                             <p>This is Photoshop's version  of Lorem Ipsum. Proin gravida nibh vel velit auctor aliquet Aenean.</p>
                         </div>
                         <div id="brnd4" class="col-3">
-                            <img src="/Assets/game.png">
+                            <img src="Assets/game.png">
                             <h6>GAME DEVELOPMENT</h6>
                             <p>This is Photoshop's version  of Lorem Ipsum. Proin gravida nibh vel velit auctor aliquet Aenean.</p>
                         </div>
                         
                             <div id="brnd5"  class="col-3">
-                            <img src="/Assets/love.png">
+                            <img src="Assets/love.png">
                             <h6>MADE WITH LOVE</h6>
                             <p>This is Photoshop's version  of Lorem Ipsum. Proin gravida nibh vel velit auctor aliquet Aenean.</p>
                             <br><br>
@@ -186,20 +204,20 @@
                     <hr class="solid">
                     <div id="tea" class="row">
                     <div id="firstcon" class="col-3">
-                        <img src="/Assets/image.png">
-                        <p class="border" ><span style="font-weight: bold;"><br>SEMF UCUK </span><br> CEO & FOUNDER<br><br></p>
+                        <img src="Assets/staku.png">
+                        <p class="border" ><span style="font-weight: bold;"><br>STACY </span><br> CEO & FOUNDER<br><br></p>
                     </div>
                     <div id="imgcon"class="col-3">
-                        <img src="/Assets/image.png">
-                        <p class="border"><span style="font-weight: bold;"><br>DIK ADALIN </span><br> ENGINEER<br><br></p>
+                        <img src="Assets/mikha.png">
+                        <p class="border"><span style="font-weight: bold;"><br>MIKHA  </span><br> ENGINEER<br><br></p>
                     </div>
                     <div id="thirdcon" class="col-3">
-                        <img src="/Assets/image.png">
-                        <p class="border" ><span style="font-weight: bold;"><br>JENG KOL </span><br> DESIGNER<br><br></p>
+                        <img src="Assets/jhoanna.png">
+                        <p class="border" ><span style="font-weight: bold;"><br>JHOANNA </span><br> DESIGNER<br><br></p>
                     </div>
                     <div id="imgcon" class="col-3">
-                        <img src="/Assets/image.png">
-                        <p class="border"><span style="font-weight: bold;"><br>PET ROMAK </span><br> MARKETING<br><br></p>
+                        <img src="Assets/sheena.png">
+                        <p class="border"><span style="font-weight: bold;"><br>SHEENA </span><br> MARKETING<br><br></p>
                     </div>
                     <p class="part " >Become part of our dream team, let’s join us ! </p>
                     <button type="button" id="teambtn" class="btn btn-outline-info" >WE ARE HIRING</button>
@@ -218,30 +236,56 @@
                 </div>
             </div>
             </div>
+
+
             <div id="cont" class="imgcontainer">
-            <img src="/Assets/1.png" style="margin-left: auto;"><img src="/Assets/2.png"><img src="/Assets/3.png"><img src="/Assets/4.png"><img src="/Assets/5.png"><img src="/Assets/6.png">
-            <img src="/Assets/6.png"><img src="/Assets/5.png"><img src="/Assets/4.png"><img src="/Assets/3.png"><img src="/Assets/2.png"><img src="/Assets/1.png">
+            <img src="Assets/ifg.jpg" id="aifg"><img src="Assets/karera.jpg" id="akarera"><img src="Assets/pantropiko.jfif" id="apantro"><img src="Assets/lagi.jpg" id="alagi"><img src="Assets/popfest.jpg" id="apf"><img src="Assets/talarawan.jpg" id="atala">
+        
+        
         </div>
+
+        <audio id="ifgg">
+            <source src="Assets/biniifg.mp3" type="audio/mp3">
+        </audio>
+        <audio id="ikarera">
+            <source src="Assets/karera.mp3" type="audio/mp3">
+        </audio>
+        <audio id="ipantropiko">
+            <source src="Assets/pantropiko.mp3" type="audio/mp3">
+        </audio>
+        <audio id="ilagi">
+            <source src="Assets/lagi.mp3" type="audio/mp3">
+        </audio>
+        <audio id="icherry">
+            <source src="Assets/cherry.mp3" type="audio/mp3">
+        </audio>
+        <audio id="isalamin">
+            <source src="Assets/salamin.mp3" type="audio/mp3">
+        </audio>
+
         <button type="button" id="proj" class="btn btn-outline-info">LOAD MORE</button><br><br>
     </section>
+
+
+
 <section id ="testimonials">
     <div class="container">
         <div class="row">
             <div class="col-12">
-            <img src="/Assets/quote.png" style ="margin-top: 10%;">
+            <img src="Assets/quote.png" style ="margin-top: 10%;">
             <h4 class="test">This is Photoshop's version  of Lorem Ipsum. Proin gravida nibh vel velit auctor aliquet. Aenean sollicitudin, lorem quis bibendum auctor, nisi elit consequat ipsum, nec sagittis sem nibh id elit. Duis sed odio sit amet nibh vulputate cursus a sit amet mauris. Morbi accumsan ipsum velit. Nam nec tellus a odio tincidunt auctor a ornare odio. Sed non  mauris vitae erat consequat auctor eu in elit.</h4>
             <h6> JANE GALADRIEL</h6>
             <p>CEO TENGKUREP</p>
         </div>
         <div class="row">
             <div class="col-12" style="margin-left: 10px;">
-                <img src="/Assets/back.png" style="margin-right: 2%;">
-                <img src="/Assets/circle1.png">
-                <img src="/Assets/circle2.png">
-                <img src="/Assets/circle 3.png">
-                <img src="/Assets/circle4.png">
-                <img src="/Assets/circle5.png">
-                <img src="/Assets/forward.png" style="margin-left: 2%;">
+                <img src="Assets/back.png" style="margin-right: 2%;">
+                <img src="Assets/circle1.png">
+                <img src="Assets/circle2.png">
+                <img src="Assets/circle 3.png">
+                <img src="Assets/circle4.png">
+                <img src="Assets/circle5.png">
+                <img src="Assets/forward.png" style="margin-left: 2%;">
             </div>
     </div>
     </div>
@@ -251,35 +295,38 @@
         <div class="row">
             <div class="col-12">
                 <p class="news">GIVE US A GOOD NEWS </p>
+
+
+               
                 <p class="happy">OUR HAPPY CLIENT</p>
             </div>
             </div>
             <row>
                 <div class="col-12">
                     <div class="logo-container2">
-                        <img src="/Assets/Logo_of_Mango_(new).svg.png"> <br>
-                <img src="/Assets/1280px-Gucci_Logo.svg.png" style="margin-top: 5vh;">
+                        <img src="Assets/Logo_of_Mango_(new).svg.png"> <br>
+                <img src="Assets/1280px-Gucci_Logo.svg.png" style="margin-top: 5vh;">
                 <br>
                 <img src="Assets/Logo_NIKE.svg.png" style="margin-top: 5vh;">
                 <br>
-                <img src="/Assets/Puma_Logo.svg.png" style="margin-top: 5vh;">
+                <img src="Assets/Puma_Logo.svg.png" style="margin-top: 5vh;">
                 <br>
-                <img src="/Assets/Billabong.svg.png" style="margin-top: 5vh;">
+                <img src="Assets/Billabong.svg.png" style="margin-top: 5vh;">
             </div>
                 <div class="col-10">
                     
                     <!-----------FORMS-->
                     <div class="col-10">
                     <div class="logo-container">
-                    <img src="/Assets/Zara_Logo.svg.png">
+                    <img src="Assets/Zara_Logo.svg.png">
                     <br>
-                    <img src="/Assets/1280px-Barneys_New_York_Logo.svg.png" style="margin-top: 5vh;">
+                    <img src="Assets/1280px-Barneys_New_York_Logo.svg.png" style="margin-top: 5vh;">
                     <br>
-                    <img src="/Assets/Calvin_klein_logo.svg.png" style="margin-top: 5vh;">
+                    <img src="Assets/Calvin_klein_logo.svg.png" style="margin-top: 5vh;">
                     <br>
-                    <img src="/Assets/Converse_logo.svg.png" style="margin-top: 5vh;">
+                    <img src="Assets/Converse_logo.svg.png" style="margin-top: 5vh;">
                     <br>
-                    <img src="/Assets/Levi's_logo.svg.png" style="margin-top: 5vh;">
+                    <img src="Assets/Levi_s_logo.svg.png" style= "margin-top:5vh;">
                     </div>
                     
                 <div class="form-floating mb-3">
@@ -327,24 +374,25 @@
                     <p class="Help">HELP <span style="margin-left: 35px;">TERM S & CONDITION</span><span style="margin-left: 35px;">PRIVACY</span></p>
                    
                 </div>
-                <div class="col-12">
+
                     <div class="center">
                         
                         <p class="studio">OUR STUDIO <span style="margin-left: 30%;">STAY IN TOUCH</span></p>
                   
-                        <img src="/Assets/location.png" alt="loc" class="loc">
-                        <img src="/Assets/paper.png" class="paper">
+                        <img src="Assets/location.png" alt="loc" class="loc">
+                        <img src="Assets/paper.png" class="paper">
+                        
                         <button type="button" id="btn1" class="btn btn-outline-secondary " >Subscribe our newsletter</button>
                         <p class="con"> Ruko cucruk, Jl. Radio luar dalem jos<br>
                              No.12 - 13, Kalideres - Jakarta Barat<br>
                              11480 - Indonesia</p>
-                         <img src="/Assets/phone.png" class="phone" >
-                         <img src="/Assets/yt.png" class="conimg1">
-                         <img src="/Assets/google-plus.png" class="iconss">
-                         <img src="/Assets/instagram.png" class="iconss" >
-                         <img src="/Assets/dribbble.png"  class="iconss" >
-                         <img src="/Assets/twitter.png"  class="iconss" >
-                         <img src="/Assets/facebook.png"  class="iconss" >
+                         <img src="Assets/phone.png" class="phone" >
+                         <img src="Assets/yt.png" class="conimg1">
+                         <img src="Assets/google-plus.png" class="iconss">
+                         <img src="Assets/instagram.png" class="iconss" >
+                         <img src="Assets/dribbble.png"  class="iconss" >
+                         <img src="Assets/twitter.png"  class="iconss" >
+                         <img src="Assets/facebook.png"  class="iconss" >
                              <p class="num">(+62) 21-2224 3333</p>
                                 
                           
@@ -357,8 +405,7 @@
             </div>
         </div>
             
-        
-                         
+      
                     </div>
                     </div>
                     </div>
